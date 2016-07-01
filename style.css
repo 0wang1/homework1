@@ -28,14 +28,13 @@
   }
 }
 /*This code was taken from CSS-tricks*/
-ul {
-  list-style-type: none;
-}
+
 body {
   margin: 0;
   padding: 0;
 }
 a {
+  text-decoration:none;
   font-family: "Open Sans", sans-serif;
   color:white;
 }
