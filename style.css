@@ -10,6 +10,7 @@
   flex-flow: row wrap;
   /* This aligns items to the end line on main-axis */
   justify-content: flex-end;
+  list-style-type: none;
 }
 
 /* Medium screens */
@@ -17,7 +18,6 @@
   .navigation {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
     justify-content: space-around;
-    list-style-type: none;
   }
 }
 
