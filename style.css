@@ -17,6 +17,7 @@
   .navigation {
     /* When on medium sized screens, we center it by evenly distributing empty space around items */
     justify-content: space-around;
+    list-style-type: none;
   }
 }
 
@@ -28,9 +29,7 @@
   }
 }
 /*This code was taken from CSS-tricks*/
-#menu-navigation > li:first-child{
-  list-style-type: none;
-}
+
 body {
   margin: 0;
   padding: 0;
