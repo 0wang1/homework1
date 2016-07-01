@@ -3,12 +3,13 @@
   background-image: url(img/Low-Res-Website-Background-300dpi.jpg);
   background-size: cover;
 }
+
 /* Large */
 .navigation {
   display: flex;
   flex-flow: row wrap;
   /* This aligns items to the end line on main-axis */
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 /* Medium screens */
@@ -31,6 +32,9 @@
 body {
   margin: 0;
   padding: 0;
+}
+a {
+  font-family: "Open Sans", sans-serif;
 }
 h1 {
   font-family: 'Oswald', sans-serif;
