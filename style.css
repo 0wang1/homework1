@@ -3,9 +3,7 @@
   background-image: url(img/Low-Res-Website-Background-300dpi.jpg);
   background-size: cover;
 }
-.itemlist{
-  flex-grow:
-}
+
 .container{
   display:flex;
   height: 100%;
@@ -14,8 +12,9 @@
   align-items: center;
   justify-content: center;
 }
-.center{
+.item{
   max-width: 100%;
+  align-self: center;
 }
 /* Large */
 .navigation {
