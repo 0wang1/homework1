@@ -28,7 +28,7 @@
   }
 }
 /*This code was taken from CSS-tricks*/
-ul:first-child{
+#menu-navigation > li:first-child{
   list-style-type: none;
 }
 body {
