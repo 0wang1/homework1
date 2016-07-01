@@ -13,6 +13,7 @@
 }
 .center{
   max-width: 50%;
+  flex-direction: column;
   justify-content: center;
 }
 /* Large */
