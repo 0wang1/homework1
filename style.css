@@ -3,7 +3,11 @@
   background-image: url(img/Low-Res-Website-Background-300dpi.jpg);
   background-size: cover;
 }
-
+.container{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
 /* Large */
 .navigation {
   display: flex;
