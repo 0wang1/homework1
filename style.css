@@ -1,11 +1,36 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans|Oswald';
+@media only screen and (max-width: 640px) {
+  #navbar ul>li:not(:last-child){
+    display: none;
+  }
+  #ibox {
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    display: inline-block;
+    width: 350px;
+  }
+}
 .cover {
   background-image: url(img/Low-Res-Website-Background-300dpi.jpg);
   background-size: cover;
 }
-
-.container{
-  display:flex;
+.rcontainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.rcontainer ul {
+  list-style-type: none;
+  font-family: "Open Sans", sans-serif;
+}
+.rcontainer ul li:first-child{
+  font-weight: 600;
+  font-size: 18px
+}
+.ccontainer{
+  display: flex;
   height: 100%;
   padding: 0;
   margin: 0;
@@ -13,58 +38,155 @@
   align-items: center;
   justify-content: center;
 }
-.item{
-  align-self: center;
+.footcontainer{
+  display: flex;
+  justify-content: space-between;
 }
+
+.footcontainer ul {
+  display: flex;
+}
+
 /* Large */
 .navigation {
   display: flex;
   flex-flow: row wrap;
-  /* This aligns items to the end line on main-axis */
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+.navigation ul {
+  display: flex;
+  list-style-type: none;
 }
 
-/* Medium screens */
-@media all and (max-width: 800px) {
-  .navigation {
-    /* When on medium sized screens, we center it by evenly distributing empty space around items */
-    justify-content: space-around;
-  }
+.item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-/* Small screens */
-@media all and (max-width: 500px) {
-  .navigation {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
-}
-/*This code was taken from CSS-tricks*/
-#navbar li{
-  list-style-type:none;
-}
-li a{
+.itembox{
   display: block;
-  color:transparent;
-  padding: 8px 0 8px 16px;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.itembox div:not(:nth-child(2)){
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.padding{
+  padding: 8px;
+}
+.centerrow{
+  margin:auto;
+}
+
+/*This code was taken from CSS-tricks*/
+li a{
+  display: inline-flex;
+  padding: 8px;
   text-decoration: none;
 }
 li a:hover {
-  background-color: #000;
+  opacity: 1;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 4px;
   color:white;
+  transition: 0.25s;
+}
+ul li:nth-child(4) a {
+  border-radius: 10px;
+  border: 2px solid lightgrey;
+}
+ul li:nth-child(4) a:hover {
+  border-radius: 10px;
+  border: 2px solid white;
 }
 body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
+}
+h1 a{
+  font-family: "Open Sans", sans-serif;
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  padding: 15px;
 }
 a {
   font-family: "Open Sans", sans-serif;
-  color:white;
+  color: black;
   text-decoration: none;
+}
+footer li {
+  display: inline-flex;
+  text-decoration: none;
+  padding: 2px;
+  margin-right: 30px;
+}
+footer span {
+  margin-left: 80px;
+}
+footer ul li{
+  list-style-type: none;
 }
 h1 {
   font-family: 'Oswald', sans-serif;
 }
 p {
   font-family: 'Open Sans', sans-serif;
+}
+html {
+  height: 100%;
+  min-height: 100%;
+}
+input {
+  display: inline-block;
+  width: 350px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 4px;
+  box-shadow: inner 0 0 100px #888;
+  margin-right: 7px;
+  border: 1px solid #ccc;
+  transition: border 1s;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+button {
+  display: inline-block;
+  background-color: #4CAF50;
+  border: 2px solid rgba(255, 255, 255, 0.5);;
+  border-radius: 7px;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: 0.5s;
+}
+/** Modified code from W3Schools*/
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  transition: 0.5s;
+}
+button:hover span:after {
+  opacity: 1;
 }
