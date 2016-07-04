@@ -8,8 +8,29 @@
     flex-direction: column;
   }
   button {
+    margin-top: 5px;
     display: inline-block;
     width: 350px;
+  }
+  .rcontainer ul li:not(:first-child){
+    display: none;
+  }
+  .rcontainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .rcontainer ul li{
+    margin-left: -40px;
+    border-bottom: 1px solid lightgreen;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  .rcontainer ul li:first-child{
+    display: flex;
+    justify-content: space-between;
+  }
+  .rcontainer ul li a:nth-child(2){
+    display: inline-flex !important;
   }
 }
 .cover {
@@ -18,8 +39,10 @@
 }
 .rcontainer{
   display: flex;
-  align-items: center;
   justify-content: space-around;
+  padding-top: 50px;
+  border-top: 1px solid lightgreen;
+  margin-top: 400px;
 }
 .rcontainer ul {
   list-style-type: none;
@@ -29,18 +52,18 @@
   font-weight: 600;
   font-size: 18px
 }
+.rcontainer ul li a:nth-child(2){
+  display: none;
+}
 .ccontainer{
   display: flex;
-  height: 100%;
-  padding: 0;
-  margin: 0;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 .footcontainer{
   display: flex;
   justify-content: space-between;
+  margin-top: 100px;
 }
 
 .footcontainer ul {
